@@ -20,5 +20,6 @@ module.exports = {
     "camelcase": "off",
     "no-unused-vars": [ "error", { "argsIgnorePattern": "next" } ],
     //"linebreak-style": ["error", "windows"],
+    "import/no-unresolved": "off" //colocado para evitar erro na importação ex.: import 'dotenv/config';
   },
 };

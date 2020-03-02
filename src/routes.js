@@ -19,12 +19,12 @@ const upload = multer(multerConfig);
 routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store);
 
-routes.use(authMiddleware); 
+routes.use(authMiddleware);
 
 routes.put('/users', UserController.update);
 
-routes.get('/providers', ProviderController.index); 
-routes.get('/providers/:providerId/available', AvailableController.index); 
+routes.get('/providers', ProviderController.index);
+routes.get('/providers/:providerId/available', AvailableController.index);
 
 routes.get('/appointments', AppointmentController.index);
 routes.post('/appointments', AppointmentController.store);

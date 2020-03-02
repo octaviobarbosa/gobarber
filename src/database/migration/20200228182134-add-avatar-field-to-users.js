@@ -13,7 +13,7 @@ module.exports = {
         allowNull: true,
       }
     )
-    
+
   },
 
   down: queryInterface => {

@@ -4,20 +4,21 @@ const NotificatrionSchema = new mongoose.Schema(
   {
     content: {
       type: String,
-      required: true,
+      required: true
     },
     user: {
       type: Number,
-      required: true,
+      required: true
     },
     read: {
       type: Boolean,
       required: true,
-      default: false,
-    },
-},
-{
-  timestamps: true,
-});
+      default: false
+    }
+  },
+  {
+    timestamps: true
+  }
+);
 
 export default mongoose.model('Notification', NotificatrionSchema);

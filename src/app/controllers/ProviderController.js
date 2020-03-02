@@ -2,7 +2,7 @@ import User from '../models/User';
 import File from '../models/File';
 
 class ProveiderController {
-  async index ( req, res ) {
+  async index(req, res) {
     const providers = await User.findAll({
       where: { provider: true },
       attributes: ['id', 'name', 'email', 'avatar_id'],
@@ -12,10 +12,10 @@ class ProveiderController {
           as: 'avatar',
           attributes: ['name', 'path', 'url']
         }
-      ],
+      ]
     });
 
-    return res.json( providers);
+    return res.json(providers);
   }
 }
 

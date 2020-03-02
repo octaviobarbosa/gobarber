@@ -8,8 +8,8 @@ class File extends Model {
         path: Sequelize.STRING,
         url: {
           type: Sequelize.VIRTUAL,
-          get(){
-            //return `http://localhost:3333/files/${this.path}`;
+          get() {
+            // return `http://localhost:3333/files/${this.path}`;
             return `${process.env.APP_URL}${this.path}`;
           }
         }
@@ -21,7 +21,6 @@ class File extends Model {
 
     return this;
   }
-
 }
 
-export default File; 
+export default File;
